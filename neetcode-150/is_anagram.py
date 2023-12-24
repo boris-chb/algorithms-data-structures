@@ -2,7 +2,7 @@
 
 def is_anagram(s: str, t: str) -> bool:
     # check if t is an anagram of s
-    # s = anagram, t= nagaram => True
+    # s = anagram, t = nagaram => True
     # s = bro, t = dude => false
     if not len(s) == len(t):
         return False

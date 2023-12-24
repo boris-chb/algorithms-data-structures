@@ -3,7 +3,7 @@ from is_anagram import is_anagram
 from collections import defaultdict
 
 
-def groupAnagrams1(strs: List[str]) -> List[List[str]]:
+def groupAnagramsWtf(strs: List[str]) -> List[List[str]]:
     # crap
     current_item = 0
     anagram_pairs = []
@@ -23,7 +23,7 @@ def groupAnagrams1(strs: List[str]) -> List[List[str]]:
     return anagram_pairs
 
 
-def groupAnagrams2(strs: List[str]) -> List[List[str]]:
+def groupAnagramsTooHard(strs: List[str]) -> List[List[str]]:
   # almost worked (using stack)
 
     anagramPairs = []
@@ -43,14 +43,19 @@ def groupAnagrams2(strs: List[str]) -> List[List[str]]:
     return anagramPairs
 
 
+
+
+
+
 def groupAnagrams(strs: List[str]) -> List[List[str]]:
     anagrams = defaultdict(list)
 
     for word in strs:
         key = ''.join(sorted(word))
         anagrams[key].append(word)
+    
+    return [*anagrams.values()]
 
-    return list(anagrams.values())
 
 
 if __name__ == '__main__':
